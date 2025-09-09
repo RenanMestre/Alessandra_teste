@@ -37,6 +37,7 @@
                 <button class="filtro-btn" data-filter="furo">Furo de orelha</button>
                 <!--<button class="filtro-btn" data-filter="trg">TRG</button>-->
                 <button class="filtro-btn" data-filter="auriculo">Auriculoterapia</button>
+                <button class="filtro-btn" data-filter="video">Vídeos</button>
             </div>
 
             <div class="galeria-grid">
@@ -207,14 +208,59 @@
                         <p>Processo finalizado</p>
                     </div>
                 </div>
-                
-                <div class="galeria-item" data-categoria="auriculo">
-                    <img src="src/img/Clientes/Aurículo C.B.R.jpg" alt="Auriculoterapia aplicação">
-                    <div class="item-overlay">
-                        <h3>Aplicação</h3>
-                        <p>Técnica precisa</p>
+
+                <div class="galeria-item" data-categoria="video">
+                    <div class="video-wrapper"></div>
+                        <video src="src/img/Clientes/Auriculoterapia banner.mp4" controls poster="src/img/Clientes/Auriculo S. M. G.jpg"></video>
+                        <div class="item-overlay">
+                            <h3>Auriculoterapia</h3>
+                            <p>Aplicando a técnica</p>
+                        </div>
                     </div>
                 </div>
+                <style>
+                    .galeria-item[data-categoria="video"] .video-wrapper {
+                        position: relative;
+                        width: 100%;
+                        padding-top: 56.25%; /* 16:9 Aspect Ratio */
+                        overflow: hidden;
+                        border-radius: 12px;
+                        box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+                        background: #000;
+                        margin-bottom: 10px;
+                    }
+                    .galeria-item[data-categoria="video"] video {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 12px;
+                        display: block;
+                    }
+                    .galeria-item[data-categoria="video"] .item-overlay {
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        background: linear-gradient(0deg, rgba(0,0,0,0.7) 60%, transparent 100%);
+                        color: #fff;
+                        padding: 16px 12px 10px 16px;
+                        border-radius: 0 0 12px 12px;
+                        pointer-events: none;
+                    }
+                    .galeria-item[data-categoria="video"] .item-overlay h3 {
+                        margin: 0 0 4px 0;
+                        font-size: 1.1em;
+                        font-weight: 700;
+                    }
+                    .galeria-item[data-categoria="video"] .item-overlay p {
+                        margin: 0;
+                        font-size: 0.95em;
+                        font-weight: 400;
+                    }
+                </style>
             </div>
         </div>
     </main>
