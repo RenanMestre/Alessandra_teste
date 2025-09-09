@@ -32,7 +32,7 @@
                 <p>Conheça nosso trabalho através das imagens dos nossos serviços</p>
             </div>
 
-            <div class="galeria-filtros">
+            <div class="galeria-filtros" id="filtro">
                 <button class="filtro-btn active" data-filter="todos">Todos</button>
                 <button class="filtro-btn" data-filter="furo">Furo de orelha</button>
                 <!--<button class="filtro-btn" data-filter="trg">TRG</button>-->
@@ -56,6 +56,14 @@
                         <p>Terapia de reprocessamento</p>
                     </div>
                 </div>-->
+                
+                <div class="galeria-item" data-categoria="auriculo">
+                    <img src="src/img/Clientes/Aurículo C.B.R.jpg" alt="Auriculoterapia">
+                    <div class="item-overlay">
+                        <h3>Auriculoterapia</h3>
+                        <p>Equilibrio e bem-estar</p>
+                    </div>
+                </div>
                 
                 <div class="galeria-item" data-categoria="auriculo">
                     <img src="src/img/Clientes/Auriculo S. M. G.jpg" alt="Auriculoterapia">
@@ -209,122 +217,79 @@
                     </div>
                 </div>
 
-                <div class="galeria-item" data-categoria="video">
-                    <div class="video-wrapper"></div>
-                        <video src="src/img/Clientes/Auriculoterapia banner.mp4" controls poster="src/img/Clientes/Auriculo S. M. G.jpg"></video>
+                <!-- Vídeos: só aparecem quando filtro "Vídeos" está ativo -->
+                <div class="galeria-item galeria-video" data-categoria="video" style="display: none;">
+                    <div class="video-wrapper">
+                        <video src="src/videos/Auriculoterapia banner.mp4" controls poster="src/img/Clientes/Auriculo S. M. G.jpg"></video>
                         <div class="item-overlay">
                             <h3>Auriculoterapia</h3>
+                            <p>Banner</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="galeria-item galeria-video" data-categoria="video" style="display: none;">
+                    <div class="video-wrapper">
+                        <video src="src/videos/ALLANA CARNEIRO.mp4" controls poster="src/img/Clientes/ALLANA 3.jpg"></video>
+                        <div class="item-overlay">
+                            <h3>Furo de Orelha</h3>
                             <p>Aplicando a técnica</p>
                         </div>
                     </div>
                 </div>
-                <style>
-                    .galeria-item[data-categoria="video"] .video-wrapper {
-                        position: relative;
-                        width: 100%;
-                        padding-top: 56.25%; /* 16:9 Aspect Ratio */
-                        overflow: hidden;
-                        border-radius: 12px;
-                        box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-                        background: #000;
-                        margin-bottom: 10px;
-                    }
-                    .galeria-item[data-categoria="video"] video {
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        border-radius: 12px;
-                        display: block;
-                    }
-                    .galeria-item[data-categoria="video"] .item-overlay {
-                        position: absolute;
-                        left: 0;
-                        right: 0;
-                        bottom: 0;
-                        background: linear-gradient(0deg, rgba(0,0,0,0.7) 60%, transparent 100%);
-                        color: #fff;
-                        padding: 16px 12px 10px 16px;
-                        border-radius: 0 0 12px 12px;
-                        pointer-events: none;
-                    }
-                    .galeria-item[data-categoria="video"] .item-overlay h3 {
-                        margin: 0 0 4px 0;
-                        font-size: 1.1em;
-                        font-weight: 700;
-                    }
-                    .galeria-item[data-categoria="video"] .item-overlay p {
-                        margin: 0;
-                        font-size: 0.95em;
-                        font-weight: 400;
-                    }
-                </style>
+
+                <div class="galeria-item galeria-video" data-categoria="video" style="display: none;">
+                    <div class="video-wrapper">
+                        <video src="src/videos/GRAZIELA.mp4" controls poster="src/img/Clientes/GRAZIELA 1.jpg"></video>
+                        <div class="item-overlay">
+                            <h3>Furo de Orelha</h3>
+                            <p>Aplicando a técnica</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="galeria-item galeria-video" data-categoria="video" style="display: none;">
+                    <div class="video-wrapper">
+                        <video src="src/videos/LAIS CARVALHO vídeo.mp4" controls poster="src/img/Clientes/LAIS 5.jpg"></video>
+                        <div class="item-overlay">
+                            <h3>Furo de Orelha</h3>
+                            <p>Cuidados</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-brand">
-          <h3>Alessandra</h3>
-          <p>Cuidando do seu bem-estar com amor e dedicação</p>
+    <footer class="footer">
+        <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+            <h3>Alessandra</h3>
+            <p>Cuidando do seu bem-estar com amor e dedicação</p>
+            </div>
+            
+            <div class="footer-links">
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <ul>
+                <li><a href="index.html">Início</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-col">
+                <h4>Serviços</h4>
+                <ul>
+                <li><a href="#filtro">Todos</a></li>
+                <li><a href="#filtro">Furo de orelha</a></li>
+                <li><a href="#filtro">Auriculoterapia</a></li>
+                <li><a href="#filtro">Vídeos</a></li>
+                </ul>
+            </div>
+            </div>
         </div>
-        
-        <div class="footer-links">
-          <div class="footer-col">
-            <h4>Navegação</h4>
-            <ul>
-              <li><a href="#sobre">Sobre</a></li>
-              <li><a href="#servicos">Serviços</a></li>
-              <li><a href="#avaliacoes">Avaliações</a></li>
-              <li><a href="#contato">Contato</a></li>
-            </ul>
-          </div>
-          
-          <div class="footer-col">
-            <h4>Serviços</h4>
-            <ul>
-              <li><a href="#">Furo de orelha</a></li>
-              <li><a href="#">TRG</a></li>
-              <li><a href="#">Auriculoterapia</a></li>
-              <li><a href="galeria.html">Galeria</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </footer>
 
-    <script>
-        const filterBtns = document.querySelectorAll('.filtro-btn');
-        const galeriaItems = document.querySelectorAll('.galeria-item');
-
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                filterBtns.forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
-
-                const filter = btn.getAttribute('data-filter');
-
-                galeriaItems.forEach(item => {
-                    if (filter === 'todos' || item.getAttribute('data-categoria') === filter) {
-                        item.style.display = 'block';
-                        setTimeout(() => {
-                            item.style.opacity = '1';
-                            item.style.transform = 'scale(1)';
-                        }, 50);
-                    } else {
-                        item.style.opacity = '0';
-                        item.style.transform = 'scale(0.8)';
-                        setTimeout(() => {
-                            item.style.display = 'none';
-                        }, 300);
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="src/js/script.js"></script>
 </body>
 </html>
