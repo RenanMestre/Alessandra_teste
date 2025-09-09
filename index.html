@@ -16,7 +16,7 @@
   <header class="header">
     <div class="container">
       <div class="logo">
-        <h2>Alessandra</h2>
+        <img src="src/img/Logo/Logo.png" alt="Logo">
       </div>
       <nav class="nav">
         <button class="nav-toggle" aria-label="Menu">
@@ -104,7 +104,7 @@
                 <i class="fas fa-user"></i>
               </div>
               <div class="cliente-info">
-                <h4>Marcio Mestre</h4>
+                <h4>Marcio M.</h4>
                 <span>Auriculoterapia</span>
               </div>
             </div>
@@ -118,21 +118,21 @@
                 <i class="fas fa-user"></i>
               </div>
               <div class="cliente-info">
-                <h4>Cida Santos</h4>
+                <h4>Cida S.</h4>
                 <span>Furo de Orelha</span>
               </div>
             </div>
           </div>
 
           <div class="avaliacao-card">
-            <div class="estrelas" data-rating="4"></div>
+            <div class="estrelas" data-rating="5"></div>
             <p>"Fiz quatro furos. Profissional atenciosa. Me deixou bem tranquila. Todos materiais esterilizados. Me deu toda assistência depois do procedimento."</p>
             <div class="cliente">
               <div class="cliente-avatar">
                 <i class="fas fa-user"></i>
               </div>
               <div class="cliente-info">
-                <h4>Laís Carvalho</h4>
+                <h4>Laís C.</h4>
                 <span>Furo de orelha</span>
               </div>
             </div>
@@ -178,12 +178,19 @@
             </div>
           </div>
           
-          <form class="contato-form" action="#" method="post">
+          <form class="contato-form" action="https://api.staticforms.xyz/submit" method="POST">
+            
             <input type="text" name="nome" placeholder="Seu nome" required>
+            
             <input type="email" name="email" placeholder="Seu e-mail" required>
+            
             <input type="tel" name="telefone" placeholder="Seu telefone">
+            
             <textarea name="mensagem" placeholder="Como posso te ajudar?" rows="4" required></textarea>
+            
             <button type="submit" class="btn-enviar">Enviar mensagem</button>
+          
+            <input type="hidden" name="accessKey" value="sf_cg2hcm7dnkm2k2i9f4nbcfc0">
           </form>
         </div>
       </div>
@@ -195,8 +202,8 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-brand">
-          <h3>Alessandra</h3>
-          <p>Cuidando do seu bem-estar com amor e dedicação</p>
+            <img src="src/img/Logo/Logo.png" alt="Logo_foote">
+            <p>Cuidando do seu bem-estar com amor e dedicação</p>
         </div>
         
         <div class="footer-links">

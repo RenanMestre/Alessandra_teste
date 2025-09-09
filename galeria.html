@@ -13,15 +13,19 @@
 <body>
     <header class="header">
         <div class="container">
-            <div class="logo">
-                <h2><a href="index.html">Alessandra</a></h2>
-            </div>
-            <nav class="nav">
-                <a href="index.html" class="btn-voltar">
-                    <i class="fas fa-arrow-left"></i>
-                    Voltar ao site
-                </a>
-            </nav>
+        <div class="logo">
+            <img src="src/img/Logo/Logo.png" alt="Logo">
+        </div>
+        <nav class="nav">
+            <button class="nav-toggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+            </button>
+            <ul class="nav-menu">
+            <li><a href="index.html">Início</a></li>
+            </ul>
+        </nav>
         </div>
     </header>
 
@@ -263,33 +267,68 @@
 
     <footer class="footer">
         <div class="container">
-        <div class="footer-content">
-            <div class="footer-brand">
-            <h3>Alessandra</h3>
-            <p>Cuidando do seu bem-estar com amor e dedicação</p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="src/img/Logo/Logo.png" alt="Logo_foote">
+                    <p>Cuidando do seu bem-estar com amor e dedicação</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Navegação</h4>
+                        <ul>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#avaliacoes">Avaliações</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                        </ul>
+                    </div>
+                
+                    <div class="footer-col">
+                        <h4>Serviços</h4>
+                        <ul>
+                        <li><a href="#">Furo de orelha</a></li>
+                        <li><a href="#">TRG</a></li>
+                        <li><a href="#">Auriculoterapia</a></li>
+                        <li><a href="galeria.html">Galeria</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-            
-            <div class="footer-links">
-            <div class="footer-col">
-                <h4>Navegação</h4>
-                <ul>
-                <li><a href="index.html">Início</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-col">
-                <h4>Serviços</h4>
-                <ul>
-                <li><a href="#filtro">Todos</a></li>
-                <li><a href="#filtro">Furo de orelha</a></li>
-                <li><a href="#filtro">Auriculoterapia</a></li>
-                <li><a href="#filtro">Vídeos</a></li>
-                </ul>
-            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Alessandra Terapias. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
     <script src="src/js/script.js"></script>
+    <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      navToggle.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        navToggle.classList.remove('active');
+      });
+    });
+
+    document.querySelectorAll('.estrelas').forEach(container => {
+      const rating = parseInt(container.getAttribute('data-rating'), 10) || 0;
+      container.innerHTML = '';
+      
+      for(let i = 1; i <= 5; i++) {
+        const star = document.createElement('span');
+        star.textContent = '★';
+        star.className = i <= rating ? 'star filled' : 'star';
+        container.appendChild(star);
+      }
+    });
+    </script>
 </body>
 </html>
