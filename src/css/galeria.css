@@ -427,11 +427,12 @@ body {
   }
   
   .galeria-header h1 {
+    padding: 15%;
     font-size: 2.5rem;
   }
 
   .galeria-grid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px));
     gap: 1.5rem;
   }
 
@@ -537,10 +538,7 @@ body {
     font-size: 0.9rem;
   }
 
-  .galeria-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
+
 
   .container {
     padding: 0 15px;
